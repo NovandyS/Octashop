@@ -101,22 +101,16 @@ class HomePageState extends State<HomePage>{
                   children: [
                     Container(
                       margin: EdgeInsets.only(top: 10, left: 24),
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Text("Hello, " + widget.username,
+                      child: Text("Hello, " + widget.username,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 22
                           ),
-                        ),
                       )
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 8, left: 16),
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Text("Welcome to Octashop"),
-                      ),
+                      margin: EdgeInsets.only(top: 8),
+                      child: Text("Welcome to Octashop!"),
                     ),
                   ],
                 ),
@@ -193,7 +187,7 @@ class HomePageState extends State<HomePage>{
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 24, left: 20, right: 20),
+              margin: EdgeInsets.only(top: 24, left: 24, right: 24),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text("Octashop established on 01 June 2022 is the first application"
@@ -207,7 +201,7 @@ class HomePageState extends State<HomePage>{
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 24, left: 20, right: 20),
+              margin: EdgeInsets.only(top: 24, left: 24, right: 24),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text("You can top up your games here with an easy click. We provide many options"
