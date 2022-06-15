@@ -40,6 +40,7 @@ class HomePageState extends State<HomePage>{
     ctx = context;
     return Scaffold(
       appBar: AppBar(
+        title: Text("Octashop"),
         backgroundColor: Colors.deepPurple,
       ),
       backgroundColor: Colors.white,
@@ -98,6 +99,7 @@ class HomePageState extends State<HomePage>{
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       margin: EdgeInsets.only(top: 10, left: 24),
@@ -109,7 +111,7 @@ class HomePageState extends State<HomePage>{
                       )
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 8),
+                      margin: EdgeInsets.only(top: 8, left: 24),
                       child: Text("Welcome to Octashop!"),
                     ),
                   ],
@@ -135,7 +137,7 @@ class HomePageState extends State<HomePage>{
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
-                        image: AssetImage("assets/1.jpg"),
+                        image: AssetImage("assets/carousel/1.jpg"),
                         fit: BoxFit.fill
                       ),
                     ),
@@ -144,7 +146,7 @@ class HomePageState extends State<HomePage>{
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
-                          image: AssetImage("assets/2.jpeg"),
+                          image: AssetImage("assets/carousel/2.jpeg"),
                           fit: BoxFit.fill
                       ),
                     ),
@@ -153,7 +155,7 @@ class HomePageState extends State<HomePage>{
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
-                          image: AssetImage("assets/3.jpg"),
+                          image: AssetImage("assets/carousel/3.jpg"),
                           fit: BoxFit.fill
                       ),
                     ),
@@ -162,7 +164,7 @@ class HomePageState extends State<HomePage>{
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
-                          image: AssetImage("assets/4.png"),
+                          image: AssetImage("assets/carousel/4.png"),
                           fit: BoxFit.fill
                       ),
                     ),
@@ -171,7 +173,7 @@ class HomePageState extends State<HomePage>{
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
-                          image: AssetImage("assets/5.jpg"),
+                          image: AssetImage("assets/carousel/5.jpg"),
                           fit: BoxFit.fill
                       ),
                     ),

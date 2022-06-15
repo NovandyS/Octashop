@@ -15,13 +15,19 @@ class VoucherPage extends StatefulWidget{
 
 }
 
-class VoucherPageState extends State<VoucherPage>{
+class VoucherPageState extends State<VoucherPage> with TickerProviderStateMixin{
   var ctx;
+  late TabController tabController;
 
   void logout (){
     Navigator.push(ctx, MaterialPageRoute(
         builder: (ctx) => LoginPage()
     ));
+  }
+
+  void initState(){
+    tabController = TabController(length: 5, vsync: this);
+    super.initState();
   }
 
   ButtonStyle buttonStyle = TextButton.styleFrom(
@@ -38,7 +44,33 @@ class VoucherPageState extends State<VoucherPage>{
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          title: Text("Voucher"),
           backgroundColor: Colors.deepPurple,
+          bottom: TabBar(
+            controller: tabController,
+            tabs: [
+              Tab(
+                icon: Image(
+                  image: AssetImage("assets/icons/mobile legend.png")),
+              ),
+              Tab(
+                icon: Image(
+                    image: AssetImage("assets/icons/free fire.png")),
+              ),
+              Tab(
+                icon: Image(
+                    image: AssetImage("assets/icons/valorant.png")),
+              ),
+              Tab(
+                icon: Image(
+                    image: AssetImage("assets/icons/ragnarok x.png")),
+              ),
+              Tab(
+                icon: Image(
+                    image: AssetImage("assets/icons/genshin impact.png")),
+              )
+            ]
+          ),
         ),
         backgroundColor: Colors.white,
         drawer: Drawer(
@@ -89,7 +121,68 @@ class VoucherPageState extends State<VoucherPage>{
             ],
           ),
         ),
-        body: SingleChildScrollView(),
+        body: TabBarView(
+            controller: tabController,
+            children: [
+              Center(
+                child: ListView(
+                  children: [
+                    SizedBox(
+                      child: Card(
+                        elevation: 6,
+                        child: SizedBox(
+                          width: 200,
+                          height: 80,
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 16),
+                                child: Image(
+                                  width: 40,
+                                  height: 40,
+                                  image: AssetImage("assets/icons/diamond-mole.png")),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    margin: EdgeInsets.only(top: 16, left: 16),
+                                    child: Text("86 Diamonds", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    margin: EdgeInsets.only(top: 8, left: 16),
+                                    child: Text("Rp 22.400"),
+                                  )
+                                ],
+                              ),
+                              Spacer(),
+                              Container(
+                                margin: EdgeInsets.only(right: 16),
+                                child: ElevatedButton(child: Text("Book"), onPressed: null),
+                              )
+                            ]
+                          )
+                        )
+                      ),
+                    ),
+                  ],
+                )
+              ),
+              Center(
+                child: null
+              ),
+              Center(
+                child: null
+              ),
+              Center(
+                child: null
+              ),
+              Center(
+                child: null
+              )
+            ],
+          ),
     );
   }
 }
