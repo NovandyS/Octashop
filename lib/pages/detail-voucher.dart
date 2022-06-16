@@ -146,7 +146,17 @@ class DetailVoucherPageState extends State<DetailVoucherPage> {
               Container(
                   margin: EdgeInsets.only(top: 32),
                   child: ElevatedButton(
-                      onPressed: validate, child: Text("Purchase")))
+                    onPressed: validate, 
+                    child: Text("Purchase"),
+                      style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
+                        ),
+                      ),
+                      fixedSize: Size(150, 40),
+                    ),
+                  ))
             ],
           ),
         ));
