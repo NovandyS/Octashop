@@ -91,46 +91,154 @@ class NewsPageState extends State<NewsPage> {
         ),
       ),
       body: SingleChildScrollView(
-          child: Column(
-        children: [
-          Container(
-            margin: EdgeInsets.only(left: 24, top: 16, right: 24),
-            child: CarouselSlider(
-              items: [
-                Container(
-                  child: Card(
-                    child: Container(
-                      child: Image(
-                        image: AssetImage("carousel/1.jpg"),
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  child: Card(),
-                ),
-                Container(
-                  child: Card(),
-                ),
-                Container(
-                  child: Card(),
-                ),
-                Container(
-                  child: Card(),
-                ),
-              ],
-              options: CarouselOptions(
-                initialPage: 0,
-                // enableInfiniteScroll: true,
-                // autoPlay: true,
-                // autoPlayInterval: Duration(seconds: 3),
-                // enlargeCenterPage: true
+        child: Container(
+          child: CarouselSlider(
+            items: [
+              Container(
+                margin: EdgeInsets.only(top: 16),
+                child: Card(
+                    elevation: 6,
+                    child: Flexible(
+                        child: Column(
+                      children: [
+                        Container(
+                            padding:
+                                EdgeInsets.only(top: 16, left: 16, right: 16),
+                            child: Image(
+                                image: AssetImage("assets/carousel/1.jpg"))),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 16),
+                          child: Text(
+                            "Insights Into Mobile Legends: Bang Bang",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 16),
+                          child: Text(
+                            "\t\t\t  MOBA is by far one of the most popular video game niches for both desktop and mobile devices. "
+                            "While the hype started with millions of players joining DOTA 2 and League of Legends, "
+                            "mobile users have also gained similar popularity. Mobile Legends: Bang Bang is the closest "
+                            "you can ever get to League of Legends on a smartphone. And the incremental upgrades over the "
+                            "years have just made the gameplay much more subtle than ever before.",
+                            textAlign: TextAlign.justify,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 16),
+                          child: Text(
+                            "src: https://www.hardcoredroid.com/insights-into-mobile-legends-bang-bang/",
+                            textAlign: TextAlign.right,
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
+                      ],
+                    ))),
               ),
+              Container(
+                margin: EdgeInsets.only(top: 16),
+                child: Card(
+                    elevation: 6,
+                    child: Flexible(
+                        child: Column(
+                      children: [
+                        Container(
+                            padding:
+                                EdgeInsets.only(top: 16, left: 16, right: 16),
+                            child: Image(
+                                image: AssetImage("assets/carousel/2.jpeg"))),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 16),
+                          child: Text(
+                            "Free Fire Rilis Mode Ranked Bomb Squad: 5v5 dan Map Baru El Pastelo",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 16),
+                          child: Text(
+                            "\t\t\t   Free Fire baru saja menghadirkan mode ranked terbaru di Bomb Squad: 5v5 yang dilengkapi dengan map baru, El Pastelo.\n\n"
+                            "\t\t\t   Para pemain game besutan Garena ini diajak untuk ikut mencoba mode ranked ini di Bomb Squad: 5v5. "
+                            "Selain itu, pemain juga diajak untuk meramaikan event spesial dengan berbagai hadiah menarik yang akan hadir di dalam game Free Fire mulai 10 Juni mendatang.",
+                            textAlign: TextAlign.justify,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 16),
+                          child: Text(
+                            "src: https://games.grid.id/read/153315738/free-fire-rilis-mode-ranked-bomb-squad-5v5-dan-map-baru-el-pastelo",
+                            textAlign: TextAlign.right,
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
+                      ],
+                    ))),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 16),
+                child: Card(
+                    elevation: 6,
+                    child: Flexible(
+                        child: Column(
+                      children: [
+                        Container(
+                            padding:
+                                EdgeInsets.only(top: 16, left: 16, right: 16),
+                            child: Image(
+                                image: AssetImage("assets/carousel/3.jpg"))),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 16),
+                          child: Text(
+                            "Riot Games is bringing Valorant to Mobile",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 16),
+                          child: Text(
+                            "\t\t\t   Valorant is undoubtedly one of the most popular modern FPS titles out there. In celebration of the game's first anniversary, Riot has announced that the game is expanding to more platforms, starting with phones and mobile devices and the game will be simply called \"Valorant Mobile.\"\n\n"
+                            "\t\t\t   Valorant Mobile will be the first step in bringing the game to more players.",
+                            textAlign: TextAlign.justify,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 16),
+                          child: Text(
+                            "src: https://www.techspot.com/news/89909-riot-games-bringing-valorant-mobile.html",
+                            textAlign: TextAlign.right,
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
+                      ],
+                    ))),
+              )
+            ],
+            options: CarouselOptions(
+              initialPage: 1,
+              height: 550,
+              enableInfiniteScroll: false
             ),
           ),
-        ],
-      )),
+        ),
+      ),
     );
   }
 }

@@ -133,90 +133,91 @@ class VoucherPageState extends State<VoucherPage>
         controller: tabController,
         children: [
           Center(
-              child: ListView(
-            children: [
-              Container(
-                margin: EdgeInsets.only(left: 16, top: 16, right: 16),
-                child: Card(
-                    elevation: 6,
-                    child: SizedBox(
-                        height: 80,
-                        child: Row(children: [
-                          Container(
-                            margin: EdgeInsets.only(left: 16),
-                            child: Image(
-                                width: 40,
-                                height: 40,
-                                image: AssetImage(
-                                    "assets/icons/diamond-mole.png")),
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 16, left: 16),
-                                child: Text("86 Diamonds",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16)),
-                              ),
-                              Container(
-                                alignment: Alignment.topLeft,
-                                margin: EdgeInsets.only(top: 8, left: 16),
-                                child: Text("Rp 22.400"),
-                              )
-                            ],
-                          ),
-                          Spacer(),
-                          Container(
-                            margin: EdgeInsets.only(right: 16),
-                            child: ElevatedButton(
-                                child: Text("Book"), onPressed: null),
-                          )
-                        ]))),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 16, top: 8, right: 16),
-                child: Card(
-                    elevation: 6,
-                    child: SizedBox(
-                        height: 80,
-                        child: Row(children: [
-                          Container(
-                            margin: EdgeInsets.only(left: 16),
-                            child: Image(
-                                width: 40,
-                                height: 40,
-                                image: AssetImage(
-                                    "assets/icons/diamond-mole.png")),
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(top: 16, left: 16),
-                                child: Text("172 Diamonds",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16)),
-                              ),
-                              Container(
-                                alignment: Alignment.topLeft,
-                                margin: EdgeInsets.only(top: 8, left: 16),
-                                child: Text("Rp 48.00"),
-                              )
-                            ],
-                          ),
-                          Spacer(),
-                          Container(
-                            margin: EdgeInsets.only(right: 16),
-                            child: ElevatedButton(
-                                child: Text("Book"), onPressed: null),
-                          )
-                        ]))),
-              ),
-            ],
-          )),
+            child: ListView(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 16, top: 16, right: 16),
+                  child: Card(
+                      elevation: 6,
+                      child: SizedBox(
+                          height: 80,
+                          child: Row(children: [
+                            Container(
+                              margin: EdgeInsets.only(left: 16),
+                              child: Image(
+                                  width: 40,
+                                  height: 40,
+                                  image: AssetImage(
+                                      "assets/icons/diamond-mole.png")),
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 16, left: 16),
+                                  child: Text("86 Diamonds",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16)),
+                                ),
+                                Container(
+                                  alignment: Alignment.topLeft,
+                                  margin: EdgeInsets.only(top: 8, left: 16),
+                                  child: Text("Rp 22.400"),
+                                )
+                              ],
+                            ),
+                            Spacer(),
+                            Container(
+                              margin: EdgeInsets.only(right: 16),
+                              child: ElevatedButton(
+                                  child: Text("Book"), onPressed: null),
+                            )
+                          ]))),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 16, top: 8, right: 16),
+                  child: Card(
+                      elevation: 6,
+                      child: SizedBox(
+                          height: 80,
+                          child: Row(children: [
+                            Container(
+                              margin: EdgeInsets.only(left: 16),
+                              child: Image(
+                                  width: 40,
+                                  height: 40,
+                                  image: AssetImage(
+                                      "assets/icons/diamond-mole.png")),
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(top: 16, left: 16),
+                                  child: Text("172 Diamonds",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16)),
+                                ),
+                                Container(
+                                  alignment: Alignment.topLeft,
+                                  margin: EdgeInsets.only(top: 8, left: 16),
+                                  child: Text("Rp 48.00"),
+                                )
+                              ],
+                            ),
+                            Spacer(),
+                            Container(
+                              margin: EdgeInsets.only(right: 16),
+                              child: ElevatedButton(
+                                  child: Text("Book"), onPressed: null),
+                            )
+                          ]))),
+                ),
+              ],
+            )
+          ),
           Center(child: null),
           Center(child: null),
           Center(child: null),
