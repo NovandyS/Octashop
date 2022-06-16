@@ -233,7 +233,10 @@ class NewsPageState extends State<NewsPage> {
               )
             ],
             options: CarouselOptions(
-                initialPage: 1, height: 550, enableInfiniteScroll: false),
+              initialPage: 1,
+              height: 550,
+              enableInfiniteScroll: false
+            ),
           ),
         ),
       ),
