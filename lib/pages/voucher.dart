@@ -49,8 +49,6 @@ class VoucherPageState extends State<VoucherPage>
     Games(name: "Mobile Legends", amount: "344 Diamonds", price: "Rp 79.000"),
     Games(name: "Mobile Legends", amount: "429 Diamonds", price: "Rp 110.000"),
   ];
-
-  
     
   @override
   Widget build(BuildContext context) {
