@@ -14,9 +14,9 @@ class App extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             primary: Colors.deepPurple,
-            onPrimary: Colors.white
-          )
-        )
+            onPrimary: Colors.white,
+          ),
+        ),
       ),
       home: LoginPage(),
     );
