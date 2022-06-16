@@ -49,7 +49,42 @@ class VoucherPageState extends State<VoucherPage>
     Games(name: "Mobile Legends", amount: "344 Diamonds", price: "Rp 79.000"),
     Games(name: "Mobile Legends", amount: "429 Diamonds", price: "Rp 110.000"),
   ];
-    
+
+  List<Games> FreeFire = [
+    Games(name: "Free Fire", amount: "70 Diamonds", price: "Rp 9.300"),
+    Games(name: "Free Fire", amount: "100 Diamonds", price: "Rp 13.500"),
+    Games(name: "Free Fire", amount: "140 Diamonds", price: "Rp 18.500"),
+    Games(name: "Free Fire", amount: "210 Diamonds", price: "Rp 28.000"),
+    Games(name: "Free Fire", amount: "355 Diamonds", price: "Rp 46.000"),
+  ];
+
+  List<Games> Valorant = [
+    Games(name: "Valorant", amount: "125 Points", price: "Rp 14.500"),
+    Games(name: "Valorant", amount: "700 Points", price: "Rp 77.500"),
+    Games(name: "Valorant", amount: "1375 Points", price: "Rp 145.000"),
+    Games(name: "Valorant", amount: "2400 Points", price: "Rp 242.000"),
+    Games(name: "Valorant", amount: "4000 Points", price: "Rp 388.000"),
+  ];
+
+  List<Games> RagnarokX = [
+    Games(name: "Ragnarok X", amount: "2200 Diamonds", price: "Rp 55.000"),
+    Games(name: "Ragnarok X", amount: "4410 Diamonds", price: "Rp 110.000"),
+    Games(name: "Ragnarok X", amount: "7370 Diamonds", price: "Rp 183.000"),
+    Games(name: "Ragnarok X", amount: "14350 Diamonds", price: "Rp 365.500"),
+    Games(name: "Ragnarok X", amount: "47710 Diamonds", price: "Rp 1.070.000"),
+  ];
+
+  List<Games> GenshinImpact = [
+    Games(name: "Genshin Impact", amount: "330 Primogems", price: "Rp 58.000"),
+    Games(name: "Genshin Impact", amount: "990 Primogems", price: "Rp 175.000"),
+    Games(
+        name: "Genshin Impact", amount: "1980 Primogems", price: "Rp 352.000"),
+    Games(
+        name: "Genshin Impact", amount: "3280 Primogems", price: "Rp 500.000"),
+    Games(
+        name: "Genshin Impact", amount: "6480 Primogems", price: "Rp 725.000"),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
