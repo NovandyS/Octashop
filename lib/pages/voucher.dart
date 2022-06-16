@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:octashop/pages/detail-voucher.dart';
 import 'package:octashop/pages/home.dart';
 import 'package:octashop/pages/login.dart';
 import 'package:octashop/pages/news.dart';
@@ -77,12 +78,9 @@ class VoucherPageState extends State<VoucherPage>
   List<Games> GenshinImpact = [
     Games(name: "Genshin Impact", amount: "330 Primogems", price: "Rp 58.000"),
     Games(name: "Genshin Impact", amount: "990 Primogems", price: "Rp 175.000"),
-    Games(
-        name: "Genshin Impact", amount: "1980 Primogems", price: "Rp 352.000"),
-    Games(
-        name: "Genshin Impact", amount: "3280 Primogems", price: "Rp 500.000"),
-    Games(
-        name: "Genshin Impact", amount: "6480 Primogems", price: "Rp 725.000"),
+    Games(name: "Genshin Impact", amount: "1980 Primogems", price: "Rp 352.000"),
+    Games(name: "Genshin Impact", amount: "3280 Primogems", price: "Rp 500.000"),
+    Games(name: "Genshin Impact", amount: "6480 Primogems", price: "Rp 725.000"),
   ];
 
   @override
@@ -92,21 +90,11 @@ class VoucherPageState extends State<VoucherPage>
         title: Text("Voucher"),
         backgroundColor: Colors.deepPurple,
         bottom: TabBar(controller: tabController, tabs: [
-          Tab(
-            icon: Image(image: AssetImage("assets/icons/mobile legend.png")),
-          ),
-          Tab(
-            icon: Image(image: AssetImage("assets/icons/free fire.png")),
-          ),
-          Tab(
-            icon: Image(image: AssetImage("assets/icons/valorant.png")),
-          ),
-          Tab(
-            icon: Image(image: AssetImage("assets/icons/ragnarok x.png")),
-          ),
-          Tab(
-            icon: Image(image: AssetImage("assets/icons/genshin impact.png")),
-          )
+          Tab(icon: Image(image: AssetImage("assets/icons/mobile-legend.png"))),
+          Tab(icon: Image(image: AssetImage("assets/icons/free-fire.png"))),
+          Tab(icon: Image(image: AssetImage("assets/icons/valorant.png"))),
+          Tab(icon: Image(image: AssetImage("assets/icons/ragnarok-x.png"))),
+          Tab(icon: Image(image: AssetImage("assets/icons/genshin-impact.png")))
         ]),
       ),
       backgroundColor: Colors.white,
@@ -137,8 +125,7 @@ class VoucherPageState extends State<VoucherPage>
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                          VoucherPage(username: widget.username),
+                      builder: (context) => VoucherPage(username: widget.username),
                     ))
               },
             ),
@@ -168,95 +155,270 @@ class VoucherPageState extends State<VoucherPage>
         controller: tabController,
         children: [
           Center(
-            child: ListView(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: 16, top: 16, right: 16),
-                  child: Card(
-                      elevation: 6,
-                      child: SizedBox(
-                          height: 80,
-                          child: Row(children: [
+            child: Column(children: MobileLegends.map((ML_one){
+              return Container(
+                margin: EdgeInsets.only(left: 16, top: 16, right: 16),
+                child: Card(
+                  elevation: 6,
+                  child: SizedBox(
+                    height: 80,
+                    child: Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 16),
+                          child: Image(width: 40, height: 40,
+                              image: AssetImage("assets/icons/diamond-mole.png"))
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
                             Container(
-                              margin: EdgeInsets.only(left: 16),
-                              child: Image(
-                                  width: 40,
-                                  height: 40,
-                                  image: AssetImage(
-                                      "assets/icons/diamond-mole.png")),
+                              margin: EdgeInsets.only(top: 16, left: 16),
+                              child: Text(ML_one.amount,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16)),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(top: 16, left: 16),
-                                  child: Text("86 Diamonds",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16)),
-                                ),
-                                Container(
-                                  alignment: Alignment.topLeft,
-                                  margin: EdgeInsets.only(top: 8, left: 16),
-                                  child: Text("Rp 22.400"),
-                                )
-                              ],
-                            ),
-                            Spacer(),
                             Container(
-                              margin: EdgeInsets.only(right: 16),
-                              child: ElevatedButton(
-                                  child: Text("Book"), onPressed: null),
+                              alignment: Alignment.topLeft,
+                              margin: EdgeInsets.only(top: 8, left: 16),
+                              child: Text(ML_one.price),
                             )
-                          ]))),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 16, top: 8, right: 16),
-                  child: Card(
-                      elevation: 6,
-                      child: SizedBox(
-                          height: 80,
-                          child: Row(children: [
-                            Container(
-                              margin: EdgeInsets.only(left: 16),
-                              child: Image(
-                                  width: 40,
-                                  height: 40,
-                                  image: AssetImage(
-                                      "assets/icons/diamond-mole.png")),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(top: 16, left: 16),
-                                  child: Text("172 Diamonds",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16)),
-                                ),
-                                Container(
-                                  alignment: Alignment.topLeft,
-                                  margin: EdgeInsets.only(top: 8, left: 16),
-                                  child: Text("Rp 48.00"),
-                                )
-                              ],
-                            ),
-                            Spacer(),
-                            Container(
-                              margin: EdgeInsets.only(right: 16),
-                              child: ElevatedButton(
-                                  child: Text("Book"), onPressed: null),
-                            )
-                          ]))),
-                ),
-              ],
-            )
+                          ],
+                        ),
+                        Spacer(),
+                        Container(
+                          margin: EdgeInsets.only(right: 16),
+                          child: ElevatedButton(
+                              child: Text("Book"), onPressed: () => {
+                                Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => DetailVoucherPage(
+                                    username: widget.username,
+                                    name: ML_one.name,
+                                    currency: ML_one.amount,
+                                    price: ML_one.price,
+                                  )))
+                              }),
+                        )
+                      ],
+                    ),                    
+                  )
+                )
+              );
+            }).toList())
           ),
-          Center(child: null),
-          Center(child: null),
-          Center(child: null),
-          Center(child: null)
+          Center(
+            child: Column(children: FreeFire.map((FF_one){
+              return Container(
+                margin: EdgeInsets.only(left: 16, top: 16, right: 16),
+                child: Card(
+                  elevation: 6,
+                  child: SizedBox(
+                    height: 80,
+                    child: Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 16),
+                          child: Image(width: 40, height: 40,
+                              image: AssetImage("assets/icons/diamond-ff.png"))
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 16, left: 16),
+                              child: Text(FF_one.amount,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16)),
+                            ),
+                            Container(
+                              alignment: Alignment.topLeft,
+                              margin: EdgeInsets.only(top: 8, left: 16),
+                              child: Text(FF_one.price),
+                            )
+                          ],
+                        ),
+                        Spacer(),
+                        Container(
+                          margin: EdgeInsets.only(right: 16),
+                          child: ElevatedButton(
+                              child: Text("Book"), onPressed: () => {
+                                Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => DetailVoucherPage(
+                                    username: widget.username,
+                                    name: FF_one.name,
+                                    currency: FF_one.amount,
+                                    price: FF_one.price,
+                                  )))
+                              }),
+                        )
+                      ],
+                    ),                    
+                  )
+                )
+              );
+            }).toList())
+          ),
+          Center(
+            child: Column(children: Valorant.map((VL_one){
+              return Container(
+                margin: EdgeInsets.only(left: 16, top: 16, right: 16),
+                child: Card(
+                  elevation: 6,
+                  child: SizedBox(
+                    height: 80,
+                    child: Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 16),
+                          child: Image(width: 40, height: 40,
+                              image: AssetImage("assets/icons/vp-valorant.png"))
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 16, left: 16),
+                              child: Text(VL_one.amount,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16)),
+                            ),
+                            Container(
+                              alignment: Alignment.topLeft,
+                              margin: EdgeInsets.only(top: 8, left: 16),
+                              child: Text(VL_one.price),
+                            )
+                          ],
+                        ),
+                        Spacer(),
+                        Container(
+                          margin: EdgeInsets.only(right: 16),
+                          child: ElevatedButton(
+                              child: Text("Book"), onPressed: () => {
+                                Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => DetailVoucherPage(
+                                    username: widget.username,
+                                    name: VL_one.name,
+                                    currency: VL_one.amount,
+                                    price: VL_one.price,
+                                  )))
+                              }),
+                        )
+                      ],
+                    ),                    
+                  )
+                )
+              );
+            }).toList())
+          ),
+          Center(
+            child: Column(children: RagnarokX.map((RX_one){
+              return Container(
+                margin: EdgeInsets.only(left: 16, top: 16, right: 16),
+                child: Card(
+                  elevation: 6,
+                  child: SizedBox(
+                    height: 80,
+                    child: Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 16),
+                          child: Image(width: 40, height: 40,
+                              image: AssetImage("assets/icons/diamond-rox.png"))
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 16, left: 16),
+                              child: Text(RX_one.amount,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16)),
+                            ),
+                            Container(
+                              alignment: Alignment.topLeft,
+                              margin: EdgeInsets.only(top: 8, left: 16),
+                              child: Text(RX_one.price),
+                            )
+                          ],
+                        ),
+                        Spacer(),
+                        Container(
+                          margin: EdgeInsets.only(right: 16),
+                          child: ElevatedButton(
+                              child: Text("Book"), onPressed: () => {
+                                Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => DetailVoucherPage(
+                                    username: widget.username,
+                                    name: RX_one.name,
+                                    currency: RX_one.amount,
+                                    price: RX_one.price,
+                                  )))
+                              }),
+                        )
+                      ],
+                    ),                    
+                  )
+                )
+              );
+            }).toList())
+          ),
+          Center(
+            child: Column(children: GenshinImpact.map((GI_one){
+              return Container(
+                margin: EdgeInsets.only(left: 16, top: 16, right: 16),
+                child: Card(
+                  elevation: 6,
+                  child: SizedBox(
+                    height: 80,
+                    child: Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 16),
+                          child: Image(width: 40, height: 40,
+                              image: AssetImage("assets/icons/primo-genshin.png"))
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 16, left: 16),
+                              child: Text(GI_one.amount,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16)),
+                            ),
+                            Container(
+                              alignment: Alignment.topLeft,
+                              margin: EdgeInsets.only(top: 8, left: 16),
+                              child: Text(GI_one.price),
+                            )
+                          ],
+                        ),
+                        Spacer(),
+                        Container(
+                          margin: EdgeInsets.only(right: 16),
+                          child: ElevatedButton(
+                              child: Text("Book"), onPressed: () => {
+                                Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => DetailVoucherPage(
+                                    username: widget.username,
+                                    name: GI_one.name,
+                                    currency: GI_one.amount,
+                                    price: GI_one.price,
+                                  )))
+                              }),
+                        )
+                      ],
+                    ),
+                  )
+                )
+              );
+            }).toList())
+          ),
         ],
       ),
     );

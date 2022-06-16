@@ -121,7 +121,7 @@ class NewsPageState extends State<NewsPage> {
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 16),
                           child: Text(
-                            "\t\t\t  MOBA is by far one of the most popular video game niches for both desktop and mobile devices. "
+                            "MOBA is by far one of the most popular video game niches for both desktop and mobile devices. "
                             "While the hype started with millions of players joining DOTA 2 and League of Legends, "
                             "mobile users have also gained similar popularity. Mobile Legends: Bang Bang is the closest "
                             "you can ever get to League of Legends on a smartphone. And the incremental upgrades over the "
@@ -168,8 +168,8 @@ class NewsPageState extends State<NewsPage> {
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 16),
                           child: Text(
-                            "\t\t\t   Free Fire baru saja menghadirkan mode ranked terbaru di Bomb Squad: 5v5 yang dilengkapi dengan map baru, El Pastelo.\n\n"
-                            "\t\t\t   Para pemain game besutan Garena ini diajak untuk ikut mencoba mode ranked ini di Bomb Squad: 5v5. "
+                            "Free Fire baru saja menghadirkan mode ranked terbaru di Bomb Squad: 5v5 yang dilengkapi dengan map baru, El Pastelo.\n\n"
+                            "Para pemain game besutan Garena ini diajak untuk ikut mencoba mode ranked ini di Bomb Squad: 5v5. "
                             "Selain itu, pemain juga diajak untuk meramaikan event spesial dengan berbagai hadiah menarik yang akan hadir di dalam game Free Fire mulai 10 Juni mendatang.",
                             textAlign: TextAlign.justify,
                           ),
@@ -213,8 +213,8 @@ class NewsPageState extends State<NewsPage> {
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 16),
                           child: Text(
-                            "\t\t\t   Valorant is undoubtedly one of the most popular modern FPS titles out there. In celebration of the game's first anniversary, Riot has announced that the game is expanding to more platforms, starting with phones and mobile devices and the game will be simply called \"Valorant Mobile.\"\n\n"
-                            "\t\t\t   Valorant Mobile will be the first step in bringing the game to more players.",
+                            "Valorant is undoubtedly one of the most popular modern FPS titles out there. In celebration of the game's first anniversary, Riot has announced that the game is expanding to more platforms, starting with phones and mobile devices and the game will be simply called \"Valorant Mobile.\"\n\n"
+                            "Valorant Mobile will be the first step in bringing the game to more players.",
                             textAlign: TextAlign.justify,
                           ),
                         ),
