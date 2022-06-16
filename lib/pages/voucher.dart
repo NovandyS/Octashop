@@ -85,6 +85,7 @@ class VoucherPageState extends State<VoucherPage>
 
   @override
   Widget build(BuildContext context) {
+    ctx = context;
     return Scaffold(
       appBar: AppBar(
         title: Text("Voucher"),
@@ -125,7 +126,8 @@ class VoucherPageState extends State<VoucherPage>
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => VoucherPage(username: widget.username),
+                      builder: (context) =>
+                          VoucherPage(username: widget.username),
                     ))
               },
             ),
@@ -155,270 +157,290 @@ class VoucherPageState extends State<VoucherPage>
         controller: tabController,
         children: [
           Center(
-            child: Column(children: MobileLegends.map((ML_one){
-              return Container(
+              child: Column(
+                  children: MobileLegends.map((ML_one) {
+            return Container(
                 margin: EdgeInsets.only(left: 16, top: 16, right: 16),
                 child: Card(
-                  elevation: 6,
-                  child: SizedBox(
-                    height: 80,
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 16),
-                          child: Image(width: 40, height: 40,
-                              image: AssetImage("assets/icons/diamond-mole.png"))
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(top: 16, left: 16),
-                              child: Text(ML_one.amount,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16)),
-                            ),
-                            Container(
-                              alignment: Alignment.topLeft,
-                              margin: EdgeInsets.only(top: 8, left: 16),
-                              child: Text(ML_one.price),
-                            )
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          margin: EdgeInsets.only(right: 16),
-                          child: ElevatedButton(
-                              child: Text("Book"), onPressed: () => {
-                                Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => DetailVoucherPage(
-                                    username: widget.username,
-                                    name: ML_one.name,
-                                    currency: ML_one.amount,
-                                    price: ML_one.price,
-                                  )))
-                              }),
-                        )
-                      ],
-                    ),                    
-                  )
-                )
-              );
-            }).toList())
-          ),
+                    elevation: 6,
+                    child: SizedBox(
+                      height: 80,
+                      child: Row(
+                        children: [
+                          Container(
+                              margin: EdgeInsets.only(left: 16),
+                              child: Image(
+                                  width: 40,
+                                  height: 40,
+                                  image: AssetImage(
+                                      "assets/icons/diamond-mole.png"))),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 16, left: 16),
+                                child: Text(ML_one.amount,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16)),
+                              ),
+                              Container(
+                                alignment: Alignment.topLeft,
+                                margin: EdgeInsets.only(top: 8, left: 16),
+                                child: Text(ML_one.price),
+                              )
+                            ],
+                          ),
+                          Spacer(),
+                          Container(
+                            margin: EdgeInsets.only(right: 16),
+                            child: ElevatedButton(
+                                child: Text("Book"),
+                                onPressed: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DetailVoucherPage(
+                                                    username: widget.username,
+                                                    name: ML_one.name,
+                                                    currency: ML_one.amount,
+                                                    price: ML_one.price,
+                                                  )))
+                                    }),
+                          )
+                        ],
+                      ),
+                    )));
+          }).toList())),
           Center(
-            child: Column(children: FreeFire.map((FF_one){
-              return Container(
+              child: Column(
+                  children: FreeFire.map((FF_one) {
+            return Container(
                 margin: EdgeInsets.only(left: 16, top: 16, right: 16),
                 child: Card(
-                  elevation: 6,
-                  child: SizedBox(
-                    height: 80,
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 16),
-                          child: Image(width: 40, height: 40,
-                              image: AssetImage("assets/icons/diamond-ff.png"))
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(top: 16, left: 16),
-                              child: Text(FF_one.amount,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16)),
-                            ),
-                            Container(
-                              alignment: Alignment.topLeft,
-                              margin: EdgeInsets.only(top: 8, left: 16),
-                              child: Text(FF_one.price),
-                            )
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          margin: EdgeInsets.only(right: 16),
-                          child: ElevatedButton(
-                              child: Text("Book"), onPressed: () => {
-                                Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => DetailVoucherPage(
-                                    username: widget.username,
-                                    name: FF_one.name,
-                                    currency: FF_one.amount,
-                                    price: FF_one.price,
-                                  )))
-                              }),
-                        )
-                      ],
-                    ),                    
-                  )
-                )
-              );
-            }).toList())
-          ),
+                    elevation: 6,
+                    child: SizedBox(
+                      height: 80,
+                      child: Row(
+                        children: [
+                          Container(
+                              margin: EdgeInsets.only(left: 16),
+                              child: Image(
+                                  width: 40,
+                                  height: 40,
+                                  image: AssetImage(
+                                      "assets/icons/diamond-ff.png"))),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 16, left: 16),
+                                child: Text(FF_one.amount,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16)),
+                              ),
+                              Container(
+                                alignment: Alignment.topLeft,
+                                margin: EdgeInsets.only(top: 8, left: 16),
+                                child: Text(FF_one.price),
+                              )
+                            ],
+                          ),
+                          Spacer(),
+                          Container(
+                            margin: EdgeInsets.only(right: 16),
+                            child: ElevatedButton(
+                                child: Text("Book"),
+                                onPressed: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DetailVoucherPage(
+                                                    username: widget.username,
+                                                    name: FF_one.name,
+                                                    currency: FF_one.amount,
+                                                    price: FF_one.price,
+                                                  )))
+                                    }),
+                          )
+                        ],
+                      ),
+                    )));
+          }).toList())),
           Center(
-            child: Column(children: Valorant.map((VL_one){
-              return Container(
+              child: Column(
+                  children: Valorant.map((VL_one) {
+            return Container(
                 margin: EdgeInsets.only(left: 16, top: 16, right: 16),
                 child: Card(
-                  elevation: 6,
-                  child: SizedBox(
-                    height: 80,
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 16),
-                          child: Image(width: 40, height: 40,
-                              image: AssetImage("assets/icons/vp-valorant.png"))
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(top: 16, left: 16),
-                              child: Text(VL_one.amount,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16)),
-                            ),
-                            Container(
-                              alignment: Alignment.topLeft,
-                              margin: EdgeInsets.only(top: 8, left: 16),
-                              child: Text(VL_one.price),
-                            )
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          margin: EdgeInsets.only(right: 16),
-                          child: ElevatedButton(
-                              child: Text("Book"), onPressed: () => {
-                                Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => DetailVoucherPage(
-                                    username: widget.username,
-                                    name: VL_one.name,
-                                    currency: VL_one.amount,
-                                    price: VL_one.price,
-                                  )))
-                              }),
-                        )
-                      ],
-                    ),                    
-                  )
-                )
-              );
-            }).toList())
-          ),
+                    elevation: 6,
+                    child: SizedBox(
+                      height: 80,
+                      child: Row(
+                        children: [
+                          Container(
+                              margin: EdgeInsets.only(left: 16),
+                              child: Image(
+                                  width: 40,
+                                  height: 40,
+                                  image: AssetImage(
+                                      "assets/icons/vp-valorant.png"))),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 16, left: 16),
+                                child: Text(VL_one.amount,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16)),
+                              ),
+                              Container(
+                                alignment: Alignment.topLeft,
+                                margin: EdgeInsets.only(top: 8, left: 16),
+                                child: Text(VL_one.price),
+                              )
+                            ],
+                          ),
+                          Spacer(),
+                          Container(
+                            margin: EdgeInsets.only(right: 16),
+                            child: ElevatedButton(
+                                child: Text("Book"),
+                                onPressed: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DetailVoucherPage(
+                                                    username: widget.username,
+                                                    name: VL_one.name,
+                                                    currency: VL_one.amount,
+                                                    price: VL_one.price,
+                                                  )))
+                                    }),
+                          )
+                        ],
+                      ),
+                    )));
+          }).toList())),
           Center(
-            child: Column(children: RagnarokX.map((RX_one){
-              return Container(
+              child: Column(
+                  children: RagnarokX.map((RX_one) {
+            return Container(
                 margin: EdgeInsets.only(left: 16, top: 16, right: 16),
                 child: Card(
-                  elevation: 6,
-                  child: SizedBox(
-                    height: 80,
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 16),
-                          child: Image(width: 40, height: 40,
-                              image: AssetImage("assets/icons/diamond-rox.png"))
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(top: 16, left: 16),
-                              child: Text(RX_one.amount,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16)),
-                            ),
-                            Container(
-                              alignment: Alignment.topLeft,
-                              margin: EdgeInsets.only(top: 8, left: 16),
-                              child: Text(RX_one.price),
-                            )
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          margin: EdgeInsets.only(right: 16),
-                          child: ElevatedButton(
-                              child: Text("Book"), onPressed: () => {
-                                Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => DetailVoucherPage(
-                                    username: widget.username,
-                                    name: RX_one.name,
-                                    currency: RX_one.amount,
-                                    price: RX_one.price,
-                                  )))
-                              }),
-                        )
-                      ],
-                    ),                    
-                  )
-                )
-              );
-            }).toList())
-          ),
+                    elevation: 6,
+                    child: SizedBox(
+                      height: 80,
+                      child: Row(
+                        children: [
+                          Container(
+                              margin: EdgeInsets.only(left: 16),
+                              child: Image(
+                                  width: 40,
+                                  height: 40,
+                                  image: AssetImage(
+                                      "assets/icons/diamond-rox.png"))),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 16, left: 16),
+                                child: Text(RX_one.amount,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16)),
+                              ),
+                              Container(
+                                alignment: Alignment.topLeft,
+                                margin: EdgeInsets.only(top: 8, left: 16),
+                                child: Text(RX_one.price),
+                              )
+                            ],
+                          ),
+                          Spacer(),
+                          Container(
+                            margin: EdgeInsets.only(right: 16),
+                            child: ElevatedButton(
+                                child: Text("Book"),
+                                onPressed: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DetailVoucherPage(
+                                                    username: widget.username,
+                                                    name: RX_one.name,
+                                                    currency: RX_one.amount,
+                                                    price: RX_one.price,
+                                                  )))
+                                    }),
+                          )
+                        ],
+                      ),
+                    )));
+          }).toList())),
           Center(
-            child: Column(children: GenshinImpact.map((GI_one){
-              return Container(
+              child: Column(
+                  children: GenshinImpact.map((GI_one) {
+            return Container(
                 margin: EdgeInsets.only(left: 16, top: 16, right: 16),
                 child: Card(
-                  elevation: 6,
-                  child: SizedBox(
-                    height: 80,
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 16),
-                          child: Image(width: 40, height: 40,
-                              image: AssetImage("assets/icons/primo-genshin.png"))
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(top: 16, left: 16),
-                              child: Text(GI_one.amount,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16)),
-                            ),
-                            Container(
-                              alignment: Alignment.topLeft,
-                              margin: EdgeInsets.only(top: 8, left: 16),
-                              child: Text(GI_one.price),
-                            )
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          margin: EdgeInsets.only(right: 16),
-                          child: ElevatedButton(
-                              child: Text("Book"), onPressed: () => {
-                                Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => DetailVoucherPage(
-                                    username: widget.username,
-                                    name: GI_one.name,
-                                    currency: GI_one.amount,
-                                    price: GI_one.price,
-                                  )))
-                              }),
-                        )
-                      ],
-                    ),
-                  )
-                )
-              );
-            }).toList())
-          ),
+                    elevation: 6,
+                    child: SizedBox(
+                      height: 80,
+                      child: Row(
+                        children: [
+                          Container(
+                              margin: EdgeInsets.only(left: 16),
+                              child: Image(
+                                  width: 40,
+                                  height: 40,
+                                  image: AssetImage(
+                                      "assets/icons/primo-genshin.png"))),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 16, left: 16),
+                                child: Text(GI_one.amount,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16)),
+                              ),
+                              Container(
+                                alignment: Alignment.topLeft,
+                                margin: EdgeInsets.only(top: 8, left: 16),
+                                child: Text(GI_one.price),
+                              )
+                            ],
+                          ),
+                          Spacer(),
+                          Container(
+                            margin: EdgeInsets.only(right: 16),
+                            child: ElevatedButton(
+                                child: Text("Book"),
+                                onPressed: () => {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DetailVoucherPage(
+                                                    username: widget.username,
+                                                    name: GI_one.name,
+                                                    currency: GI_one.amount,
+                                                    price: GI_one.price,
+                                                  )))
+                                    }),
+                          )
+                        ],
+                      ),
+                    )));
+          }).toList())),
         ],
       ),
     );

@@ -30,6 +30,7 @@ class NewsPageState extends State<NewsPage> {
 
   @override
   Widget build(BuildContext context) {
+    ctx = context;
     return Scaffold(
       appBar: AppBar(
         title: Text("News & Promotion"),
@@ -232,10 +233,7 @@ class NewsPageState extends State<NewsPage> {
               )
             ],
             options: CarouselOptions(
-              initialPage: 1,
-              height: 550,
-              enableInfiniteScroll: false
-            ),
+                initialPage: 1, height: 550, enableInfiniteScroll: false),
           ),
         ),
       ),
